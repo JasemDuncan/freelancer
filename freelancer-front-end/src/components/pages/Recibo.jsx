@@ -10,6 +10,7 @@ export const Recibo = () => {
   const [recibo, setRecibo] = useState({});
   const [cargando, setCargando] = useState(true);
   const params = useParams();
+  
   useEffect(() => {
     conseguirRecibo();
   }, []);
@@ -21,9 +22,8 @@ export const Recibo = () => {
     if (datos.status === "success") {
       setRecibo(datos.recibo);
     }
-    setCargando(false);
-    console.log(recibo);
 
+    setCargando(false);
   };
 
   return (

@@ -25,8 +25,9 @@ export const Listado = ({ recibos, setRecibos }) => {
           </div>
           <div className="datos">
             <h3 className="title"><Link to={"/recibo/"+recibo._id}>{recibo.titulo}</Link></h3>
-            <p className="description">jasemduncan.com</p>
-            <button className="edit">Editar</button>
+            <p className="description">{recibo.descripcion}</p>
+            
+            <Link to={"/editar/"+recibo._id} className="edit">Editar</Link>
             <button className="delete" onClick={()=>{
               eliminar(recibo._id)
             }}>Borrar</button>
