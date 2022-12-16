@@ -1,7 +1,19 @@
 import React from 'react'
 import {Global} from '../../helpers/Global';
+import { Peticion } from '../../helpers/Peticion';
 
 export const Listado = ({ recibos, setRecibos }) => {
+
+  const eliminar = async(id) =>{
+    let {datos}= await Peticion(Global.url+"recibo/"+id, "DELETE");
+    
+    if(datos.status === "success"){
+      let recibosActualizados = recibos.filter(recibo => recibo._id !==id)
+      setRecibos(recibosActualizados);
+    }
+
+  };
+
   return (
     recibos.map(recibo => {
       return (
@@ -15,7 +27,7 @@ export const Listado = ({ recibos, setRecibos }) => {
             <p className="description">jasemduncan.com</p>
             <button className="edit">Editar</button>
             <button className="delete" onClick={()=>{
-              eliminar(articulo)
+              eliminar(recibo._id)
             }}>Borrar</button>
           </div>
         </article>
