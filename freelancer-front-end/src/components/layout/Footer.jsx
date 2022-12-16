@@ -2,6 +2,8 @@ import React from 'react'
 
 export const Footer = () => {
   return (
-    <div>Footer</div>
+    <footer className="footer">
+      &copy: Master en Javascript ES12 y TypeScript -  <a href="https://www.google.com">JasemDuncan</a>
+    </footer>
   )
 }
