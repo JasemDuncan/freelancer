@@ -126,8 +126,6 @@ const borrar = (req, res) => {
     });
 };
 
-
-
 const editar = (req, res)=>{
     //Recoger id recibo a editar
     let reciboId = req.params.id;

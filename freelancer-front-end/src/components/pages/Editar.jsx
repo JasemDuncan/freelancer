@@ -78,10 +78,10 @@ export const Editar = () => {
           <input type="text" name="titulo" onChange={cambiado} defaultValue={recibo.titulo} />
         </div>
 
-        <div className='form-group'>
+        {/* <div className='form-group'>
           <label htmlFor="logo">Logo</label>
           <input type="text" name="logo" onChange={cambiado} defaultValue={recibo.logo} />
-        </div>
+        </div> */}
 
         <div className='form-group'>
           <label htmlFor="file0">Imagen</label>

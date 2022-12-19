@@ -56,14 +56,14 @@ export const Crear = () => {
       <form className='formulario' onSubmit={guardarRecibo}>
 
         <div className='form-group'>
-          <label htmlFor="titulo">Titulo</label>
+          <label htmlFor="titulo">Titulo*</label>
           <input type="text" name="titulo" onChange={cambiado} />
         </div>
 
-        <div className='form-group'>
+        {/* <div className='form-group'>
           <label htmlFor="logo">Logo</label>
           <input type="text" name="logo" onChange={cambiado} />
-        </div>
+        </div> */}
 
         <div className='form-group'>
           <label htmlFor="file0">Imagen</label>
@@ -81,7 +81,7 @@ export const Crear = () => {
         </div>
 
         <div className='form-group'>
-          <label htmlFor="descripcion">Descripcion</label>
+          <label htmlFor="descripcion">Descripcion*</label>
           <input type="text" name="descripcion" onChange={cambiado} />
         </div>
 
