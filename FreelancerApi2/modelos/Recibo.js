@@ -2,6 +2,7 @@
 
 const {Schema, model} = require("mongoose");
 
+
 const ReciboSchema = Schema({
     titulo: {
         type: String,
@@ -39,6 +40,6 @@ const ReciboSchema = Schema({
         type: String,
         require: true
     }
-});
+},{versionKey: false});
 
 module.exports = model("Recibo",ReciboSchema, "recibos");
